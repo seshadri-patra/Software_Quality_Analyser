@@ -1,0 +1,3 @@
+"""
+SQA-AI tests package.
+"""

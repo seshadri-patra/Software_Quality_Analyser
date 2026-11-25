@@ -1,0 +1,166 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<title>SQA-AI Analysis Report: Test - Test</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;background:#f6f7fb;color:#111;margin:0}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+.header{background:#1f2937;color:#fff;padding:18px;border-radius:10px}
+.card{background:#fff;margin-top:16px;border-radius:10px;border:1px solid #e5e7eb}
+.card h2{margin:0;padding:14px 18px;border-bottom:1px solid #e5e7eb}
+.card .body{padding:16px 18px}
+.badge{display:inline-block;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:bold}
+.b-critical{background:#fee2e2;color:#991b1b}
+.b-high{background:#ffedd5;color:#9a3412}
+.b-medium{background:#fef3c7;color:#92400e}
+.b-low{background:#dcfce7;color:#166534}
+table{width:100%;border-collapse:collapse}
+th,td{padding:10px;border-bottom:1px solid #eee;text-align:left}
+th{background:#f9fafb}
+</style></head><body>
+<div class="container">
+<div class="header">
+  <h1>SQA-AI Analysis Report: Test</h1>
+  <div><b>Test</b></div>
+  <div>C:\Users\subha\OneDrive\Desktop\Sri Ram\Seshadri\SQA-AI</div>
+  <div>Generated: 2026-02-04 21:33:33</div>
+</div>
+
+<div class="card"><h2>Executive Summary</h2>
+<div class="body">
+  <div><b>Health:</b> <span style="color:#28a745;font-weight:bold">86/100</span>
+      (GOOD)</div>
+  <div>Files: 23 | Total SLOC: 6,634 |
+       Avg DDI: 14.0</div>
+  <div style="margin-top:10px">
+    <span class="badge b-critical">Critical: 1</span>
+    <span class="badge b-high">High: 64</span>
+    <span class="badge b-medium">Medium: 160</span>
+    <span class="badge b-low">Low: 111</span>
+  </div>
+</div></div>
+<div class="card"><h2>Top Recommendations</h2><div class="body"><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-critical">CRITICAL</span> <b>Critical: Function Complexity (44)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: main.py</div>
+<div style="margin-top:6px">A function has complexity of 44, which is extremely high. This is a maintenance risk.</div>
+<div style="margin-top:6px"><b>Action:</b> Immediately refactor this function. Break it into multiple smaller functions with single responsibilities.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>Poor Maintainability Index (21.3)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: utils\report_generator.py</div>
+<div style="margin-top:6px">Maintainability index of 21.3 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>High Cyclomatic Complexity (95)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: utils\report_generator.py</div>
+<div style="margin-top:6px">The cyclomatic complexity of 95 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>Poor Maintainability Index (33.83)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: utils\logger.py</div>
+<div style="margin-top:6px">Maintainability index of 33.83 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>High Cyclomatic Complexity (77)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: utils\logger.py</div>
+<div style="margin-top:6px">The cyclomatic complexity of 77 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>High Cyclomatic Complexity (73)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: utils\file_handler.py</div>
+<div style="margin-top:6px">The cyclomatic complexity of 73 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>High Cyclomatic Complexity (52)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: utils\config.py</div>
+<div style="margin-top:6px">The cyclomatic complexity of 52 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>High Cyclomatic Complexity (39)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: tests\test_parser.py</div>
+<div style="margin-top:6px">The cyclomatic complexity of 39 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>Poor Maintainability Index (25.83)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: sample_repos\demo_project\complex.py</div>
+<div style="margin-top:6px">Maintainability index of 25.83 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>High Cyclomatic Complexity (63)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: sample_repos\demo_project\complex.py</div>
+<div style="margin-top:6px">The cyclomatic complexity of 63 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>Poor Maintainability Index (14.64)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: main.py</div>
+<div style="margin-top:6px">Maintainability index of 14.64 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>High Cyclomatic Complexity (146)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: main.py</div>
+<div style="margin-top:6px">The cyclomatic complexity of 146 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>Poor Maintainability Index (37.54)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: database\models.py</div>
+<div style="margin-top:6px">Maintainability index of 37.54 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>High Cyclomatic Complexity (79)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: database\models.py</div>
+<div style="margin-top:6px">The cyclomatic complexity of 79 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>Poor Maintainability Index (37.15)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: database\db_manager.py</div>
+<div style="margin-top:6px">Maintainability index of 37.15 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>High Cyclomatic Complexity (93)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: database\db_manager.py</div>
+<div style="margin-top:6px">The cyclomatic complexity of 93 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>Poor Maintainability Index (23.63)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: dashboard\components.py</div>
+<div style="margin-top:6px">Maintainability index of 23.63 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>High Cyclomatic Complexity (105)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: dashboard\components.py</div>
+<div style="margin-top:6px">The cyclomatic complexity of 105 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>Poor Maintainability Index (20.48)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: dashboard\app.py</div>
+<div style="margin-top:6px">Maintainability index of 20.48 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>High Cyclomatic Complexity (125)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: dashboard\app.py</div>
+<div style="margin-top:6px">The cyclomatic complexity of 125 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>Poor Maintainability Index (23.28)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: core\recommendation_engine.py</div>
+<div style="margin-top:6px">Maintainability index of 23.28 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>High Cyclomatic Complexity (111)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: core\recommendation_engine.py</div>
+<div style="margin-top:6px">The cyclomatic complexity of 111 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>Poor Maintainability Index (0)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: core\parser.py</div>
+<div style="margin-top:6px">Maintainability index of 0 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>High Cyclomatic Complexity (218)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: core\parser.py</div>
+<div style="margin-top:6px">The cyclomatic complexity of 218 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+</div><div style="margin-bottom:14px;padding:10px;border-left:4px solid #e5e7eb;background:#fafafa">
+<div><span class="badge b-high">HIGH</span> <b>Poor Maintainability Index (21.12)</b></div>
+<div style="color:#555;font-size:12px;margin-top:3px">File: core\metric_normalizer.py</div>
+<div style="margin-top:6px">Maintainability index of 21.12 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+<div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+</div></div></div></div></body></html>

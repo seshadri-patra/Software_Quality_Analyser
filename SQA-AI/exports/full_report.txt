@@ -1,0 +1,385 @@
+========================================================================
+SQA-AI Report: Test
+========================================================================
+Project: Test
+Path: C:\Users\subha\OneDrive\Desktop\Sri Ram\Seshadri\SQA-AI
+Generated: 2026-05-07 06:02:18
+
+EXECUTIVE SUMMARY
+------------------------------------------------------------------------
+Health Score: 89/100 (GOOD)
+Avg DDI: 11.0 | Avg MI: 48.4 | Avg CC: 65.0
+Files: 28 | SLOC: 6526
+
+CHANGE VS PREVIOUS SCAN
+------------------------------------------------------------------------
+Previous run: 2026-04-30T02:39:07
+Δ Health: -0.2
+Δ Avg DDI: +0.20 (negative is improvement)
+Δ Avg MI: -0.33
+Δ Avg CC: -0.04
+
+FULL TREND TABLE (latest scans)
+------------------------------------------------------------------------
+Run Date | Health | Avg DDI | Avg MI | Avg CC | Files | SLOC
+2026-05-07T00:29:47 | 89 | 11.0 | 48.4 | 65.0 | 28 | 6526
+2026-04-30T02:39:07 | 89 | 10.8 | 48.8 | 65.0 | 28 | 6543
+2026-04-03T13:54:45 | 90 | 10.5 | 48.8 | 64.9 | 28 | 6540
+2026-03-06T03:16:31 | 71 | 28.6 | 49.1 | 63.2 | 27 | 6040
+2026-03-06T03:10:27 | 71 | 29.4 | 42.7 | 67.5 | 24 | 5930
+2026-02-04T15:56:10 | 86 | 14.0 | 42.1 | 74.4 | 23 | 6634
+2026-02-04T15:55:10 | 86 | 14.0 | 42.1 | 74.4 | 23 | 6634
+2026-02-04T15:54:02 | 86 | 14.0 | 42.1 | 74.4 | 23 | 6634
+2026-02-04T03:42:50 | 0 | 14.0 | 41.9 | 74.8 | 23 | 6727
+
+TOP RECOMMENDATIONS
+------------------------------------------------------------------------
+1. [CRITICAL] Critical: Function Complexity (51)
+   File: sample_repos\multilang_bad_project\src\BadJava.java
+   Location: File-level
+   Trigger: max_complexity = 51.0 (threshold: 30.0)
+   Issue: A function has complexity of 51, which is extremely high. This is a maintenance risk.
+   Action: Immediately refactor this function. Break it into multiple smaller functions with single responsibilities.
+
+2. [CRITICAL] Critical: Function Complexity (52)
+   File: sample_repos\multilang_bad_project\src\bad.js
+   Location: File-level
+   Trigger: max_complexity = 52.0 (threshold: 30.0)
+   Issue: A function has complexity of 52, which is extremely high. This is a maintenance risk.
+   Action: Immediately refactor this function. Break it into multiple smaller functions with single responsibilities.
+
+3. [HIGH] Poor Maintainability Index (27.55)
+   File: utils\report_generator.py
+   Location: Function: _html | Class: ReportGenerator | Lines 175-273
+   Trigger: maintainability_index = 27.55 (threshold: 40.0)
+   Issue: Maintainability index of 27.55 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.
+   Action: Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.
+
+4. [HIGH] High Cyclomatic Complexity (65)
+   File: utils\report_generator.py
+   Location: Function: _html | Class: ReportGenerator | Lines 175-273
+   Trigger: cyclomatic_complexity = 65.0 (threshold: 20.0)
+   Issue: The cyclomatic complexity of 65 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.
+   Action: Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.
+
+5. [HIGH] Poor Maintainability Index (33.83)
+   File: utils\logger.py
+   Location: Function: _is_binary | Class: SafeFileReader | Lines 310-319
+   Trigger: maintainability_index = 33.83 (threshold: 40.0)
+   Issue: Maintainability index of 33.83 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.
+   Action: Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.
+
+6. [HIGH] High Cyclomatic Complexity (77)
+   File: utils\logger.py
+   Location: Function: _is_binary | Class: SafeFileReader | Lines 310-319
+   Trigger: cyclomatic_complexity = 77.0 (threshold: 20.0)
+   Issue: The cyclomatic complexity of 77 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.
+   Action: Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.
+
+7. [HIGH] High Cyclomatic Complexity (73)
+   File: utils\file_handler.py
+   Location: Function: get_all_files | Class: FileHandler | Lines 191-233
+   Trigger: cyclomatic_complexity = 73.0 (threshold: 20.0)
+   Issue: The cyclomatic complexity of 73 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.
+   Action: Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.
+
+8. [HIGH] High Cyclomatic Complexity (52)
+   File: utils\config.py
+   Location: Function: _validate_config | Class: Config | Lines 133-154
+   Trigger: cyclomatic_complexity = 52.0 (threshold: 20.0)
+   Issue: The cyclomatic complexity of 52 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.
+   Action: Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.
+
+9. [HIGH] High Cyclomatic Complexity (39)
+   File: tests\test_parser.py
+   Location: Function: test_parser_extracts_basic_metrics | Lines 18-38
+   Trigger: cyclomatic_complexity = 39.0 (threshold: 20.0)
+   Issue: The cyclomatic complexity of 39 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.
+   Action: Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.
+
+10. [HIGH] High Cyclomatic Complexity (34.0)
+   File: sample_repos\multilang_bad_project\src\BadJava.java
+   Location: File-level
+   Trigger: cyclomatic_complexity = 34.0 (threshold: 20.0)
+   Issue: The cyclomatic complexity of 34.0 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.
+   Action: Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.
+
+11. [HIGH] High Cyclomatic Complexity (26)
+   File: sample_repos\multilang_bad_project\src\bad_python.py
+   Location: Function: monster | Lines 1-38
+   Trigger: cyclomatic_complexity = 26.0 (threshold: 20.0)
+   Issue: The cyclomatic complexity of 26 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.
+   Action: Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.
+
+12. [HIGH] High Cyclomatic Complexity (35.0)
+   File: sample_repos\multilang_bad_project\src\bad.js
+   Location: File-level
+   Trigger: cyclomatic_complexity = 35.0 (threshold: 20.0)
+   Issue: The cyclomatic complexity of 35.0 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.
+   Action: Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.
+
+13. [HIGH] Poor Maintainability Index (25.83)
+   File: sample_repos\demo_project\complex.py
+   Location: Function: process | Class: ComplexProcessor | Lines 18-66
+   Trigger: maintainability_index = 25.83 (threshold: 40.0)
+   Issue: Maintainability index of 25.83 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.
+   Action: Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.
+
+14. [HIGH] High Cyclomatic Complexity (63)
+   File: sample_repos\demo_project\complex.py
+   Location: Function: process | Class: ComplexProcessor | Lines 18-66
+   Trigger: cyclomatic_complexity = 63.0 (threshold: 20.0)
+   Issue: The cyclomatic complexity of 63 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.
+   Action: Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.
+
+15. [HIGH] Poor Maintainability Index (14.98)
+   File: main.py
+   Location: Function: scan_project | Lines 274-408
+   Trigger: maintainability_index = 14.98 (threshold: 40.0)
+   Issue: Maintainability index of 14.98 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.
+   Action: Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.
+
+16. [HIGH] High Cyclomatic Complexity (111)
+   File: main.py
+   Location: Function: scan_project | Lines 274-408
+   Trigger: cyclomatic_complexity = 111.0 (threshold: 20.0)
+   Issue: The cyclomatic complexity of 111 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.
+   Action: Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.
+
+17. [HIGH] Poor Maintainability Index (37.54)
+   File: database\models.py
+   Location: Function: from_recommendation | Class: RecommendationRecord | Lines 459-509
+   Trigger: maintainability_index = 37.54 (threshold: 40.0)
+   Issue: Maintainability index of 37.54 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.
+   Action: Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.
+
+18. [HIGH] High Cyclomatic Complexity (79)
+   File: database\models.py
+   Location: Function: from_recommendation | Class: RecommendationRecord | Lines 459-509
+   Trigger: cyclomatic_complexity = 79.0 (threshold: 20.0)
+   Issue: The cyclomatic complexity of 79 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.
+   Action: Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.
+
+19. [HIGH] Poor Maintainability Index (37.15)
+   File: database\db_manager.py
+   Location: Function: update_project | Class: DBManager | Lines 284-299
+   Trigger: maintainability_index = 37.15 (threshold: 40.0)
+   Issue: Maintainability index of 37.15 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.
+   Action: Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.
+
+20. [HIGH] High Cyclomatic Complexity (93)
+   File: database\db_manager.py
+   Location: Function: update_project | Class: DBManager | Lines 284-299
+   Trigger: cyclomatic_complexity = 93.0 (threshold: 20.0)
+   Issue: The cyclomatic complexity of 93 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.
+   Action: Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.
+
+21. [HIGH] Poor Maintainability Index (22.99)
+   File: dashboard\components.py
+   Location: Function: render_file_deep_dive_panel | Lines 1084-1225
+   Trigger: maintainability_index = 22.99 (threshold: 40.0)
+   Issue: Maintainability index of 22.99 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.
+   Action: Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.
+
+22. [HIGH] High Cyclomatic Complexity (123)
+   File: dashboard\components.py
+   Location: Function: render_file_deep_dive_panel | Lines 1084-1225
+   Trigger: cyclomatic_complexity = 123.0 (threshold: 20.0)
+   Issue: The cyclomatic complexity of 123 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.
+   Action: Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.
+
+23. [HIGH] Poor Maintainability Index (21.84)
+   File: dashboard\app.py
+   Location: Function: page_overview | Lines 249-506
+   Trigger: maintainability_index = 21.84 (threshold: 40.0)
+   Issue: Maintainability index of 21.84 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.
+   Action: Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.
+
+24. [HIGH] High Cyclomatic Complexity (83)
+   File: dashboard\app.py
+   Location: Function: page_overview | Lines 249-506
+   Trigger: cyclomatic_complexity = 83.0 (threshold: 20.0)
+   Issue: The cyclomatic complexity of 83 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.
+   Action: Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.
+
+25. [HIGH] Poor Maintainability Index (35.09)
+   File: core\trend_analyzer.py
+   Location: Function: analyze_history | Class: TrendAnalyzer | Lines 189-359
+   Trigger: maintainability_index = 35.09 (threshold: 40.0)
+   Issue: Maintainability index of 35.09 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.
+   Action: Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.
+
+26. [HIGH] High Cyclomatic Complexity (80)
+   File: core\trend_analyzer.py
+   Location: Function: analyze_history | Class: TrendAnalyzer | Lines 189-359
+   Trigger: cyclomatic_complexity = 80.0 (threshold: 20.0)
+   Issue: The cyclomatic complexity of 80 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.
+   Action: Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.
+
+27. [HIGH] Poor Maintainability Index (24.75)
+   File: core\recommendation_engine.py
+   Location: Function: _generate_project_summary | Class: RecommendationEngine | Lines 1045-1104
+   Trigger: maintainability_index = 24.75 (threshold: 40.0)
+   Issue: Maintainability index of 24.75 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.
+   Action: Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.
+
+28. [HIGH] High Cyclomatic Complexity (111)
+   File: core\recommendation_engine.py
+   Location: Function: _generate_project_summary | Class: RecommendationEngine | Lines 1045-1104
+   Trigger: cyclomatic_complexity = 111.0 (threshold: 20.0)
+   Issue: The cyclomatic complexity of 111 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.
+   Action: Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.
+
+29. [HIGH] Rapid Quality Decline (Decay Rate: 0.60)
+   File: core\parser.py
+   Location: Function: _extract_radon_metrics | Class: CodeParser | Lines 671-724
+   Trigger: decay_rate = 0.6 (threshold: 0.5)
+   Issue: Quality decay rate of 0.60 indicates rapid deterioration. This file is losing maintainability quickly.
+   Action: Investigate recent changes. Consider reverting problematic commits. Plan immediate refactoring.
+
+30. [HIGH] Poor Maintainability Index (0)
+   File: core\parser.py
+   Location: Function: _extract_radon_metrics | Class: CodeParser | Lines 671-724
+   Trigger: maintainability_index = 0.0 (threshold: 40.0)
+   Issue: Maintainability index of 0 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.
+   Action: Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.
+
+31. [HIGH] High Cyclomatic Complexity (226)
+   File: core\parser.py
+   Location: Function: _extract_radon_metrics | Class: CodeParser | Lines 671-724
+   Trigger: cyclomatic_complexity = 226.0 (threshold: 20.0)
+   Issue: The cyclomatic complexity of 226 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.
+   Action: Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.
+
+32. [HIGH] Poor Maintainability Index (21.12)
+   File: core\metric_normalizer.py
+   Location: Function: _z_score_normalize | Class: MetricNormalizer | Lines 275-313
+   Trigger: maintainability_index = 21.12 (threshold: 40.0)
+   Issue: Maintainability index of 21.12 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.
+   Action: Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.
+
+33. [HIGH] High Cyclomatic Complexity (120)
+   File: core\metric_normalizer.py
+   Location: Function: _z_score_normalize | Class: MetricNormalizer | Lines 275-313
+   Trigger: cyclomatic_complexity = 120.0 (threshold: 20.0)
+   Issue: The cyclomatic complexity of 120 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.
+   Action: Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.
+
+34. [HIGH] Poor Maintainability Index (12.97)
+   File: core\git_analyzer.py
+   Location: Function: get_commits | Class: GitAnalyzer | Lines 342-428
+   Trigger: maintainability_index = 12.97 (threshold: 40.0)
+   Issue: Maintainability index of 12.97 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.
+   Action: Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.
+
+35. [HIGH] High Cyclomatic Complexity (179)
+   File: core\git_analyzer.py
+   Location: Function: get_commits | Class: GitAnalyzer | Lines 342-428
+   Trigger: cyclomatic_complexity = 179.0 (threshold: 20.0)
+   Issue: The cyclomatic complexity of 179 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.
+   Action: Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.
+
+36. [HIGH] Poor Maintainability Index (27.68)
+   File: core\ddi_calculator.py
+   Location: Function: _calculate_confidence | Class: DDICalculator | Lines 487-525
+   Trigger: maintainability_index = 27.68 (threshold: 40.0)
+   Issue: Maintainability index of 27.68 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.
+   Action: Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.
+
+37. [HIGH] High Cyclomatic Complexity (98)
+   File: core\ddi_calculator.py
+   Location: Function: _calculate_confidence | Class: DDICalculator | Lines 487-525
+   Trigger: cyclomatic_complexity = 98.0 (threshold: 20.0)
+   Issue: The cyclomatic complexity of 98 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.
+   Action: Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.
+
+38. [HIGH] Very Long Function (135 lines)
+   File: main.py
+   Location: Function: scan_project | Lines 274-408
+   Trigger: max_function_length = 135.0 (threshold: 100.0)
+   Issue: A function has 135 lines, which is extremely long and violates best practices.
+   Action: Immediately refactor. Extract logical sections into separate functions. Consider using design patterns.
+
+39. [HIGH] Very Long Function (175 lines)
+   File: database\db_manager.py
+   Location: Function: _create_minimal_schema | Class: DBManager | Lines 69-243
+   Trigger: max_function_length = 175.0 (threshold: 100.0)
+   Issue: A function has 175 lines, which is extremely long and violates best practices.
+   Action: Immediately refactor. Extract logical sections into separate functions. Consider using design patterns.
+
+40. [HIGH] Very Long Function (274 lines)
+   File: dashboard\components.py
+   Location: Function: render_trend_dashboard | Lines 735-1008
+   Trigger: max_function_length = 274.0 (threshold: 100.0)
+   Issue: A function has 274 lines, which is extremely long and violates best practices.
+   Action: Immediately refactor. Extract logical sections into separate functions. Consider using design patterns.
+
+41. [HIGH] Very Long Function (258 lines)
+   File: dashboard\app.py
+   Location: Function: page_overview | Lines 249-506
+   Trigger: max_function_length = 258.0 (threshold: 100.0)
+   Issue: A function has 258 lines, which is extremely long and violates best practices.
+   Action: Immediately refactor. Extract logical sections into separate functions. Consider using design patterns.
+
+42. [HIGH] Very Long Function (171 lines)
+   File: core\trend_analyzer.py
+   Location: Function: analyze_history | Class: TrendAnalyzer | Lines 189-359
+   Trigger: max_function_length = 171.0 (threshold: 100.0)
+   Issue: A function has 171 lines, which is extremely long and violates best practices.
+   Action: Immediately refactor. Extract logical sections into separate functions. Consider using design patterns.
+
+43. [HIGH] Very Long Function (491 lines)
+   File: core\recommendation_engine.py
+   Location: Function: _get_default_rules | Class: RecommendationEngine | Lines 164-654
+   Trigger: max_function_length = 491.0 (threshold: 100.0)
+   Issue: A function has 491 lines, which is extremely long and violates best practices.
+   Action: Immediately refactor. Extract logical sections into separate functions. Consider using design patterns.
+
+44. [HIGH] Very Long Function (101 lines)
+   File: core\ddi_calculator.py
+   Location: Function: calculate_ddi | Class: DDICalculator | Lines 220-320
+   Trigger: max_function_length = 101.0 (threshold: 100.0)
+   Issue: A function has 101 lines, which is extremely long and violates best practices.
+   Action: Immediately refactor. Extract logical sections into separate functions. Consider using design patterns.
+
+45. [HIGH] Critical: No Documentation (0.0%)
+   File: tests\test_recommendation_engine.py
+   Location: Function: test_recommendations_generated_for_bad_metrics | Lines 11-39
+   Trigger: comment_density = 0.0 (threshold: 0.05)
+   Issue: Comment density of 0.0% indicates virtually no documentation. This severely impacts maintainability.
+   Action: Prioritize adding documentation. Start with public APIs, then document complex internal logic.
+
+46. [HIGH] Critical: No Documentation (0.0%)
+   File: tests\test_ddi_calculator.py
+   Location: Function: test_ddi_low_risk_minimal_inputs | Lines 11-42
+   Trigger: comment_density = 0.0 (threshold: 0.05)
+   Issue: Comment density of 0.0% indicates virtually no documentation. This severely impacts maintainability.
+   Action: Prioritize adding documentation. Start with public APIs, then document complex internal logic.
+
+47. [HIGH] Critical: No Documentation (0.0%)
+   File: tests\__init.py
+   Location: File-level
+   Trigger: comment_density = 0.0 (threshold: 0.05)
+   Issue: Comment density of 0.0% indicates virtually no documentation. This severely impacts maintainability.
+   Action: Prioritize adding documentation. Start with public APIs, then document complex internal logic.
+
+48. [HIGH] Critical: No Documentation (0.0%)
+   File: sample_repos\multilang_bad_project\src\BadJava.java
+   Location: File-level
+   Trigger: comment_density = 0.0 (threshold: 0.05)
+   Issue: Comment density of 0.0% indicates virtually no documentation. This severely impacts maintainability.
+   Action: Prioritize adding documentation. Start with public APIs, then document complex internal logic.
+
+49. [HIGH] Critical: No Documentation (1.9%)
+   File: sample_repos\multilang_bad_project\src\bad_python.py
+   Location: Function: monster | Lines 1-38
+   Trigger: comment_density = 0.0189 (threshold: 0.05)
+   Issue: Comment density of 1.9% indicates virtually no documentation. This severely impacts maintainability.
+   Action: Prioritize adding documentation. Start with public APIs, then document complex internal logic.
+
+50. [HIGH] Critical: No Documentation (2.8%)
+   File: sample_repos\multilang_bad_project\src\bad.js
+   Location: File-level
+   Trigger: comment_density = 0.0278 (threshold: 0.05)
+   Issue: Comment density of 2.8% indicates virtually no documentation. This severely impacts maintainability.
+   Action: Prioritize adding documentation. Start with public APIs, then document complex internal logic.

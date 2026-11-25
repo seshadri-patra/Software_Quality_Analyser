@@ -1,0 +1,163 @@
+# SQA-AI Configuration
+# Version 2.0 - Updated for paper-compliant DDI formula
+
+project:
+  name: "SQA-AI"
+  version: "2.0.0"
+
+# Metric Thresholds
+thresholds:
+  cyclomatic_complexity:
+    low: 10
+    medium: 20
+    high: 30
+  
+  maintainability_index:
+    good: 65
+    moderate: 45
+    poor: 25
+  
+  comment_density:
+    good: 0.2
+    moderate: 0.1
+    poor: 0.05
+  
+  loc_per_function:
+    good: 30
+    moderate: 50
+    poor: 100
+  
+  # Contributor entropy thresholds (Shannon entropy in bits)
+  contributor_entropy:
+    low: 1.0        # Single dominant contributor
+    moderate: 2.0   # Few contributors
+    high: 2.5       # Many contributors
+    critical: 3.5   # Chaotic ownership
+  
+  # Volatility thresholds (std dev of commit gaps in days)
+  volatility:
+    low: 15
+    moderate: 30
+    high: 60
+  
+  # Days since last change
+  staleness:
+    recent: 30
+    moderate: 90
+    stale: 180
+    very_stale: 365
+
+# DDI Configuration
+# Formula: DDI = (Decay × 0.35) + (Entropy × 0.30) + (Volatility × 0.20) + (CC × 0.15)
+ddi:
+  weights:
+    decay_rate: 0.35
+    entropy: 0.30
+    volatility: 0.20
+    complexity: 0.15    # Changed from 'frequency' to match paper
+  
+  risk_levels:
+    low: 25
+    medium: 50
+    high: 75
+    critical: 90
+  
+  # Trend analysis settings
+  trend:
+    smoothing_alpha: 0.3
+    prediction_days: 30
+    min_data_points: 3
+
+# Scoring Weights for SQS (Software Quality Score)
+scoring:
+  maintainability_index: 0.30
+  cyclomatic_complexity: 0.25
+  comment_density: 0.10
+  coupling: 0.15
+  cohesion: 0.10
+  duplication: 0.10
+
+# Recommendation thresholds
+recommendations:
+  complexity:
+    moderate: 10
+    high: 20
+    critical: 30
+  
+  maintainability:
+    poor: 40
+    moderate: 65
+  
+  entropy:
+    moderate: 1.5    # bits
+    high: 2.5        # bits
+  
+  volatility:
+    moderate: 30     # days std dev
+    high: 60         # days std dev
+  
+  decay_rate:
+    moderate: 0.2
+    high: 0.5
+
+# Dashboard Settings
+dashboard:
+  theme: "light"
+  charts_per_row: 2
+  max_files_display: 50
+  max_recommendations: 50
+  
+  # Color scheme (WCAG AA compliant)
+  colors:
+    success: "#059669"
+    warning: "#D97706"
+    danger: "#DC2626"
+    info: "#2563EB"
+    text_dark: "#0F172A"
+    text_medium: "#334155"
+
+# Database
+database:
+  path: "sqa.db"
+  backup_enabled: true
+  max_history_per_file: 100
+
+# Git Analysis
+git:
+  max_commits: 5000
+  skip_directories:
+    - test
+    - tests
+    - vendor
+    - node_modules
+    - venv
+    - __pycache__
+    - .git
+    - build
+    - dist
+
+# CI/CD Integration
+cicd:
+  fail_threshold: 75          # DDI score to fail build
+  warn_threshold: 50          # DDI score to warn
+  exit_codes:
+    success: 0
+    quality_gate_failed: 1
+    general_error: 2
+
+# Logging
+logging:
+  level: "INFO"
+  file: "sqa_ai.log"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# Export settings
+export:
+  formats:
+    - html
+    - json
+    - txt
+    - pdf
+  max_recommendations_in_report: 100
+  include_trends: true
+  

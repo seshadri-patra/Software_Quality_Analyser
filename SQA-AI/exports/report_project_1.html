@@ -1,0 +1,449 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SQA-AI Report: SQA-AI-Self-Test - SQA-AI-Self-Test</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;background:#f6f7fb;color:#111;margin:0}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+.header{background:#1f2937;color:#fff;padding:18px;border-radius:10px}
+.card{background:#fff;margin-top:16px;border-radius:10px;border:1px solid #e5e7eb}
+.card h2{margin:0;padding:14px 18px;border-bottom:1px solid #e5e7eb}
+.card .body{padding:16px 18px}
+table{width:100%;border-collapse:collapse}
+th,td{padding:10px;border-bottom:1px solid #eee;text-align:left;font-size:13px}
+th{background:#f9fafb}
+.rec{padding:10px;border-left:4px solid #e5e7eb;background:#fafafa;margin-bottom:12px}
+.small{color:#555;font-size:12px}
+code{background:#eee;padding:2px 6px;border-radius:6px}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>SQA-AI Report: SQA-AI-Self-Test</h1>
+    <div><b>SQA-AI-Self-Test</b></div>
+    <div class="small">C:\Users\subha\OneDrive\Desktop\Sri Ram\Seshadri\SQA-AI</div>
+  </div>
+
+  <div class="card"><h2>Executive Summary</h2><div class="body">
+    <div><b>Health:</b> 80/100 (MODERATE)</div>
+    <div class="small">
+      Avg DDI: 20.1 |
+      Avg MI: 51.3 |
+      Avg CC: 61.2 |
+      Files: 28 |
+      SLOC: 6183
+    </div>
+  </div></div>
+
+  <div class="card"><h2>Full Trend Table</h2><div class="body">
+    <table>
+<tr><th>Run Date</th><th>Health</th><th>Avg DDI</th><th>Avg MI</th><th>Avg CC</th><th>Files</th><th>SLOC</th></tr><tr><td>2026-03-09T16:13:06</td><td>80</td><td>20.1</td><td>51.3</td><td>61.2</td><td>28</td><td>6183</td></tr>
+    </table>
+  </div></div>
+
+  <div class="card"><h2>Top Recommendations (with evidence)</h2><div class="body">
+
+    <div class="rec">
+      <div><b>[CRITICAL] Critical: Function Complexity (51)</b></div>
+      <div class="small">File: <code>sample_repos\multilang_bad_project\src\BadJava.java</code> | Location: <code>File-level</code></div>
+      <div class="small">Trigger: <code>max_complexity = 51.0 (threshold: 30.0)</code></div>
+      <div style="margin-top:6px">A function has complexity of 51, which is extremely high. This is a maintenance risk.</div>
+      <div style="margin-top:6px"><b>Action:</b> Immediately refactor this function. Break it into multiple smaller functions with single responsibilities.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[CRITICAL] Critical: Function Complexity (52)</b></div>
+      <div class="small">File: <code>sample_repos\multilang_bad_project\src\bad.js</code> | Location: <code>File-level</code></div>
+      <div class="small">Trigger: <code>max_complexity = 52.0 (threshold: 30.0)</code></div>
+      <div style="margin-top:6px">A function has complexity of 52, which is extremely high. This is a maintenance risk.</div>
+      <div style="margin-top:6px"><b>Action:</b> Immediately refactor this function. Break it into multiple smaller functions with single responsibilities.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Poor Maintainability Index (27.55)</b></div>
+      <div class="small">File: <code>utils\report_generator.py</code> | Location: <code>Function: _html | Class: ReportGenerator | Lines 175-273</code></div>
+      <div class="small">Trigger: <code>maintainability_index = 27.55 (threshold: 40.0)</code></div>
+      <div style="margin-top:6px">Maintainability index of 27.55 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] High Cyclomatic Complexity (65)</b></div>
+      <div class="small">File: <code>utils\report_generator.py</code> | Location: <code>Function: _html | Class: ReportGenerator | Lines 175-273</code></div>
+      <div class="small">Trigger: <code>cyclomatic_complexity = 65.0 (threshold: 20.0)</code></div>
+      <div style="margin-top:6px">The cyclomatic complexity of 65 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Rapid Quality Decline (Decay Rate: 5.42)</b></div>
+      <div class="small">File: <code>utils\logger.py</code> | Location: <code>Function: _is_binary | Class: SafeFileReader | Lines 310-319</code></div>
+      <div class="small">Trigger: <code>decay_rate = 5.419354838709677 (threshold: 0.5)</code></div>
+      <div style="margin-top:6px">Quality decay rate of 5.42 indicates rapid deterioration. This file is losing maintainability quickly.</div>
+      <div style="margin-top:6px"><b>Action:</b> Investigate recent changes. Consider reverting problematic commits. Plan immediate refactoring.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Poor Maintainability Index (33.83)</b></div>
+      <div class="small">File: <code>utils\logger.py</code> | Location: <code>Function: _is_binary | Class: SafeFileReader | Lines 310-319</code></div>
+      <div class="small">Trigger: <code>maintainability_index = 33.83 (threshold: 40.0)</code></div>
+      <div style="margin-top:6px">Maintainability index of 33.83 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] High Cyclomatic Complexity (77)</b></div>
+      <div class="small">File: <code>utils\logger.py</code> | Location: <code>Function: _is_binary | Class: SafeFileReader | Lines 310-319</code></div>
+      <div class="small">Trigger: <code>cyclomatic_complexity = 77.0 (threshold: 20.0)</code></div>
+      <div style="margin-top:6px">The cyclomatic complexity of 77 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] High Cyclomatic Complexity (73)</b></div>
+      <div class="small">File: <code>utils\file_handler.py</code> | Location: <code>Function: get_all_files | Class: FileHandler | Lines 191-233</code></div>
+      <div class="small">Trigger: <code>cyclomatic_complexity = 73.0 (threshold: 20.0)</code></div>
+      <div style="margin-top:6px">The cyclomatic complexity of 73 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] High Cyclomatic Complexity (52)</b></div>
+      <div class="small">File: <code>utils\config.py</code> | Location: <code>Function: _validate_config | Class: Config | Lines 133-154</code></div>
+      <div class="small">Trigger: <code>cyclomatic_complexity = 52.0 (threshold: 20.0)</code></div>
+      <div style="margin-top:6px">The cyclomatic complexity of 52 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] High Cyclomatic Complexity (39)</b></div>
+      <div class="small">File: <code>tests\test_parser.py</code> | Location: <code>Function: test_parser_extracts_basic_metrics | Lines 18-38</code></div>
+      <div class="small">Trigger: <code>cyclomatic_complexity = 39.0 (threshold: 20.0)</code></div>
+      <div style="margin-top:6px">The cyclomatic complexity of 39 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] High Cyclomatic Complexity (34.0)</b></div>
+      <div class="small">File: <code>sample_repos\multilang_bad_project\src\BadJava.java</code> | Location: <code>File-level</code></div>
+      <div class="small">Trigger: <code>cyclomatic_complexity = 34.0 (threshold: 20.0)</code></div>
+      <div style="margin-top:6px">The cyclomatic complexity of 34.0 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] High Cyclomatic Complexity (26)</b></div>
+      <div class="small">File: <code>sample_repos\multilang_bad_project\src\bad_python.py</code> | Location: <code>Function: monster | Lines 1-38</code></div>
+      <div class="small">Trigger: <code>cyclomatic_complexity = 26.0 (threshold: 20.0)</code></div>
+      <div style="margin-top:6px">The cyclomatic complexity of 26 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] High Cyclomatic Complexity (35.0)</b></div>
+      <div class="small">File: <code>sample_repos\multilang_bad_project\src\bad.js</code> | Location: <code>File-level</code></div>
+      <div class="small">Trigger: <code>cyclomatic_complexity = 35.0 (threshold: 20.0)</code></div>
+      <div style="margin-top:6px">The cyclomatic complexity of 35.0 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Poor Maintainability Index (25.83)</b></div>
+      <div class="small">File: <code>sample_repos\demo_project\complex.py</code> | Location: <code>Function: process | Class: ComplexProcessor | Lines 18-66</code></div>
+      <div class="small">Trigger: <code>maintainability_index = 25.83 (threshold: 40.0)</code></div>
+      <div style="margin-top:6px">Maintainability index of 25.83 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] High Cyclomatic Complexity (63)</b></div>
+      <div class="small">File: <code>sample_repos\demo_project\complex.py</code> | Location: <code>Function: process | Class: ComplexProcessor | Lines 18-66</code></div>
+      <div class="small">Trigger: <code>cyclomatic_complexity = 63.0 (threshold: 20.0)</code></div>
+      <div style="margin-top:6px">The cyclomatic complexity of 63 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Rapid Quality Decline (Decay Rate: 12.67)</b></div>
+      <div class="small">File: <code>main.py</code> | Location: <code>Function: scan_project | Lines 274-408</code></div>
+      <div class="small">Trigger: <code>decay_rate = 12.667741935483871 (threshold: 0.5)</code></div>
+      <div style="margin-top:6px">Quality decay rate of 12.67 indicates rapid deterioration. This file is losing maintainability quickly.</div>
+      <div style="margin-top:6px"><b>Action:</b> Investigate recent changes. Consider reverting problematic commits. Plan immediate refactoring.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Poor Maintainability Index (14.98)</b></div>
+      <div class="small">File: <code>main.py</code> | Location: <code>Function: scan_project | Lines 274-408</code></div>
+      <div class="small">Trigger: <code>maintainability_index = 14.98 (threshold: 40.0)</code></div>
+      <div style="margin-top:6px">Maintainability index of 14.98 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] High Cyclomatic Complexity (111)</b></div>
+      <div class="small">File: <code>main.py</code> | Location: <code>Function: scan_project | Lines 274-408</code></div>
+      <div class="small">Trigger: <code>cyclomatic_complexity = 111.0 (threshold: 20.0)</code></div>
+      <div style="margin-top:6px">The cyclomatic complexity of 111 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Poor Maintainability Index (37.54)</b></div>
+      <div class="small">File: <code>database\models.py</code> | Location: <code>Function: from_recommendation | Class: RecommendationRecord | Lines 459-509</code></div>
+      <div class="small">Trigger: <code>maintainability_index = 37.54 (threshold: 40.0)</code></div>
+      <div style="margin-top:6px">Maintainability index of 37.54 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] High Cyclomatic Complexity (79)</b></div>
+      <div class="small">File: <code>database\models.py</code> | Location: <code>Function: from_recommendation | Class: RecommendationRecord | Lines 459-509</code></div>
+      <div class="small">Trigger: <code>cyclomatic_complexity = 79.0 (threshold: 20.0)</code></div>
+      <div style="margin-top:6px">The cyclomatic complexity of 79 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Rapid Quality Decline (Decay Rate: 13.72)</b></div>
+      <div class="small">File: <code>database\db_manager.py</code> | Location: <code>Function: update_project | Class: DBManager | Lines 284-299</code></div>
+      <div class="small">Trigger: <code>decay_rate = 13.722580645161289 (threshold: 0.5)</code></div>
+      <div style="margin-top:6px">Quality decay rate of 13.72 indicates rapid deterioration. This file is losing maintainability quickly.</div>
+      <div style="margin-top:6px"><b>Action:</b> Investigate recent changes. Consider reverting problematic commits. Plan immediate refactoring.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Poor Maintainability Index (37.15)</b></div>
+      <div class="small">File: <code>database\db_manager.py</code> | Location: <code>Function: update_project | Class: DBManager | Lines 284-299</code></div>
+      <div class="small">Trigger: <code>maintainability_index = 37.15 (threshold: 40.0)</code></div>
+      <div style="margin-top:6px">Maintainability index of 37.15 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] High Cyclomatic Complexity (93)</b></div>
+      <div class="small">File: <code>database\db_manager.py</code> | Location: <code>Function: update_project | Class: DBManager | Lines 284-299</code></div>
+      <div class="small">Trigger: <code>cyclomatic_complexity = 93.0 (threshold: 20.0)</code></div>
+      <div style="margin-top:6px">The cyclomatic complexity of 93 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Poor Maintainability Index (24.32)</b></div>
+      <div class="small">File: <code>dashboard\components.py</code> | Location: <code>Function: render_progress_cards | Lines 179-292</code></div>
+      <div class="small">Trigger: <code>maintainability_index = 24.32 (threshold: 40.0)</code></div>
+      <div style="margin-top:6px">Maintainability index of 24.32 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] High Cyclomatic Complexity (117)</b></div>
+      <div class="small">File: <code>dashboard\components.py</code> | Location: <code>Function: render_progress_cards | Lines 179-292</code></div>
+      <div class="small">Trigger: <code>cyclomatic_complexity = 117.0 (threshold: 20.0)</code></div>
+      <div style="margin-top:6px">The cyclomatic complexity of 117 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Poor Maintainability Index (34.81)</b></div>
+      <div class="small">File: <code>dashboard\app.py</code> | Location: <code>Function: page_overview | Lines 231-419</code></div>
+      <div class="small">Trigger: <code>maintainability_index = 34.81 (threshold: 40.0)</code></div>
+      <div style="margin-top:6px">Maintainability index of 34.81 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] High Cyclomatic Complexity (76)</b></div>
+      <div class="small">File: <code>dashboard\app.py</code> | Location: <code>Function: page_overview | Lines 231-419</code></div>
+      <div class="small">Trigger: <code>cyclomatic_complexity = 76.0 (threshold: 20.0)</code></div>
+      <div style="margin-top:6px">The cyclomatic complexity of 76 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Poor Maintainability Index (24.75)</b></div>
+      <div class="small">File: <code>core\recommendation_engine.py</code> | Location: <code>Function: _generate_project_summary | Class: RecommendationEngine | Lines 1045-1104</code></div>
+      <div class="small">Trigger: <code>maintainability_index = 24.75 (threshold: 40.0)</code></div>
+      <div style="margin-top:6px">Maintainability index of 24.75 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] High Cyclomatic Complexity (111)</b></div>
+      <div class="small">File: <code>core\recommendation_engine.py</code> | Location: <code>Function: _generate_project_summary | Class: RecommendationEngine | Lines 1045-1104</code></div>
+      <div class="small">Trigger: <code>cyclomatic_complexity = 111.0 (threshold: 20.0)</code></div>
+      <div style="margin-top:6px">The cyclomatic complexity of 111 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Rapid Quality Decline (Decay Rate: 18.12)</b></div>
+      <div class="small">File: <code>core\parser.py</code> | Location: <code>Function: _extract_radon_metrics | Class: CodeParser | Lines 671-724</code></div>
+      <div class="small">Trigger: <code>decay_rate = 18.116129032258062 (threshold: 0.5)</code></div>
+      <div style="margin-top:6px">Quality decay rate of 18.12 indicates rapid deterioration. This file is losing maintainability quickly.</div>
+      <div style="margin-top:6px"><b>Action:</b> Investigate recent changes. Consider reverting problematic commits. Plan immediate refactoring.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Poor Maintainability Index (0)</b></div>
+      <div class="small">File: <code>core\parser.py</code> | Location: <code>Function: _extract_radon_metrics | Class: CodeParser | Lines 671-724</code></div>
+      <div class="small">Trigger: <code>maintainability_index = 0.0 (threshold: 40.0)</code></div>
+      <div style="margin-top:6px">Maintainability index of 0 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] High Cyclomatic Complexity (226)</b></div>
+      <div class="small">File: <code>core\parser.py</code> | Location: <code>Function: _extract_radon_metrics | Class: CodeParser | Lines 671-724</code></div>
+      <div class="small">Trigger: <code>cyclomatic_complexity = 226.0 (threshold: 20.0)</code></div>
+      <div style="margin-top:6px">The cyclomatic complexity of 226 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Poor Maintainability Index (21.12)</b></div>
+      <div class="small">File: <code>core\metric_normalizer.py</code> | Location: <code>Function: _z_score_normalize | Class: MetricNormalizer | Lines 275-313</code></div>
+      <div class="small">Trigger: <code>maintainability_index = 21.12 (threshold: 40.0)</code></div>
+      <div style="margin-top:6px">Maintainability index of 21.12 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] High Cyclomatic Complexity (120)</b></div>
+      <div class="small">File: <code>core\metric_normalizer.py</code> | Location: <code>Function: _z_score_normalize | Class: MetricNormalizer | Lines 275-313</code></div>
+      <div class="small">Trigger: <code>cyclomatic_complexity = 120.0 (threshold: 20.0)</code></div>
+      <div style="margin-top:6px">The cyclomatic complexity of 120 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Rapid Quality Decline (Decay Rate: 0.54)</b></div>
+      <div class="small">File: <code>core\git_analyzer.py</code> | Location: <code>Function: get_commits | Class: GitAnalyzer | Lines 337-423</code></div>
+      <div class="small">Trigger: <code>decay_rate = 0.5410900000000001 (threshold: 0.5)</code></div>
+      <div style="margin-top:6px">Quality decay rate of 0.54 indicates rapid deterioration. This file is losing maintainability quickly.</div>
+      <div style="margin-top:6px"><b>Action:</b> Investigate recent changes. Consider reverting problematic commits. Plan immediate refactoring.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Poor Maintainability Index (13.74)</b></div>
+      <div class="small">File: <code>core\git_analyzer.py</code> | Location: <code>Function: get_commits | Class: GitAnalyzer | Lines 337-423</code></div>
+      <div class="small">Trigger: <code>maintainability_index = 13.74 (threshold: 40.0)</code></div>
+      <div style="margin-top:6px">Maintainability index of 13.74 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] High Cyclomatic Complexity (171)</b></div>
+      <div class="small">File: <code>core\git_analyzer.py</code> | Location: <code>Function: get_commits | Class: GitAnalyzer | Lines 337-423</code></div>
+      <div class="small">Trigger: <code>cyclomatic_complexity = 171.0 (threshold: 20.0)</code></div>
+      <div style="margin-top:6px">The cyclomatic complexity of 171 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Rapid Quality Decline (Decay Rate: 12.14)</b></div>
+      <div class="small">File: <code>core\ddi_calculator.py</code> | Location: <code>Function: _calculate_confidence | Class: DDICalculator | Lines 469-507</code></div>
+      <div class="small">Trigger: <code>decay_rate = 12.135483870967741 (threshold: 0.5)</code></div>
+      <div style="margin-top:6px">Quality decay rate of 12.14 indicates rapid deterioration. This file is losing maintainability quickly.</div>
+      <div style="margin-top:6px"><b>Action:</b> Investigate recent changes. Consider reverting problematic commits. Plan immediate refactoring.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Poor Maintainability Index (26.37)</b></div>
+      <div class="small">File: <code>core\ddi_calculator.py</code> | Location: <code>Function: _calculate_confidence | Class: DDICalculator | Lines 469-507</code></div>
+      <div class="small">Trigger: <code>maintainability_index = 26.37 (threshold: 40.0)</code></div>
+      <div style="margin-top:6px">Maintainability index of 26.37 is below the minimum acceptable threshold of 40. This file will be difficult to maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Reduce complexity, improve documentation, and break down large functions. Consider refactoring or rewriting.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] High Cyclomatic Complexity (95)</b></div>
+      <div class="small">File: <code>core\ddi_calculator.py</code> | Location: <code>Function: _calculate_confidence | Class: DDICalculator | Lines 469-507</code></div>
+      <div class="small">Trigger: <code>cyclomatic_complexity = 95.0 (threshold: 20.0)</code></div>
+      <div style="margin-top:6px">The cyclomatic complexity of 95 exceeds the recommended maximum of 20. Complex code is harder to test, understand, and maintain.</div>
+      <div style="margin-top:6px"><b>Action:</b> Refactor into smaller functions. Extract complex conditions into named methods. Consider using polymorphism instead of conditionals.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Very Long Function (135 lines)</b></div>
+      <div class="small">File: <code>main.py</code> | Location: <code>Function: scan_project | Lines 274-408</code></div>
+      <div class="small">Trigger: <code>max_function_length = 135.0 (threshold: 100.0)</code></div>
+      <div style="margin-top:6px">A function has 135 lines, which is extremely long and violates best practices.</div>
+      <div style="margin-top:6px"><b>Action:</b> Immediately refactor. Extract logical sections into separate functions. Consider using design patterns.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Very Long Function (175 lines)</b></div>
+      <div class="small">File: <code>database\db_manager.py</code> | Location: <code>Function: _create_minimal_schema | Class: DBManager | Lines 69-243</code></div>
+      <div class="small">Trigger: <code>max_function_length = 175.0 (threshold: 100.0)</code></div>
+      <div style="margin-top:6px">A function has 175 lines, which is extremely long and violates best practices.</div>
+      <div style="margin-top:6px"><b>Action:</b> Immediately refactor. Extract logical sections into separate functions. Consider using design patterns.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Very Long Function (274 lines)</b></div>
+      <div class="small">File: <code>dashboard\components.py</code> | Location: <code>Function: render_trend_dashboard | Lines 722-995</code></div>
+      <div class="small">Trigger: <code>max_function_length = 274.0 (threshold: 100.0)</code></div>
+      <div style="margin-top:6px">A function has 274 lines, which is extremely long and violates best practices.</div>
+      <div style="margin-top:6px"><b>Action:</b> Immediately refactor. Extract logical sections into separate functions. Consider using design patterns.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Very Long Function (189 lines)</b></div>
+      <div class="small">File: <code>dashboard\app.py</code> | Location: <code>Function: page_overview | Lines 231-419</code></div>
+      <div class="small">Trigger: <code>max_function_length = 189.0 (threshold: 100.0)</code></div>
+      <div style="margin-top:6px">A function has 189 lines, which is extremely long and violates best practices.</div>
+      <div style="margin-top:6px"><b>Action:</b> Immediately refactor. Extract logical sections into separate functions. Consider using design patterns.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Very Long Function (491 lines)</b></div>
+      <div class="small">File: <code>core\recommendation_engine.py</code> | Location: <code>Function: _get_default_rules | Class: RecommendationEngine | Lines 164-654</code></div>
+      <div class="small">Trigger: <code>max_function_length = 491.0 (threshold: 100.0)</code></div>
+      <div style="margin-top:6px">A function has 491 lines, which is extremely long and violates best practices.</div>
+      <div style="margin-top:6px"><b>Action:</b> Immediately refactor. Extract logical sections into separate functions. Consider using design patterns.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Very Long Function (101 lines)</b></div>
+      <div class="small">File: <code>core\ddi_calculator.py</code> | Location: <code>Function: calculate_ddi | Class: DDICalculator | Lines 219-319</code></div>
+      <div class="small">Trigger: <code>max_function_length = 101.0 (threshold: 100.0)</code></div>
+      <div style="margin-top:6px">A function has 101 lines, which is extremely long and violates best practices.</div>
+      <div style="margin-top:6px"><b>Action:</b> Immediately refactor. Extract logical sections into separate functions. Consider using design patterns.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Critical: No Documentation (0.0%)</b></div>
+      <div class="small">File: <code>tests\test_recommendation_engine.py</code> | Location: <code>Function: test_recommendations_generated_for_bad_metrics | Lines 11-39</code></div>
+      <div class="small">Trigger: <code>comment_density = 0.0 (threshold: 0.05)</code></div>
+      <div style="margin-top:6px">Comment density of 0.0% indicates virtually no documentation. This severely impacts maintainability.</div>
+      <div style="margin-top:6px"><b>Action:</b> Prioritize adding documentation. Start with public APIs, then document complex internal logic.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Critical: No Documentation (0.0%)</b></div>
+      <div class="small">File: <code>tests\test_ddi_calculator.py</code> | Location: <code>Function: test_ddi_low_risk_minimal_inputs | Lines 11-42</code></div>
+      <div class="small">Trigger: <code>comment_density = 0.0 (threshold: 0.05)</code></div>
+      <div style="margin-top:6px">Comment density of 0.0% indicates virtually no documentation. This severely impacts maintainability.</div>
+      <div style="margin-top:6px"><b>Action:</b> Prioritize adding documentation. Start with public APIs, then document complex internal logic.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Critical: No Documentation (0.0%)</b></div>
+      <div class="small">File: <code>tests\__init.py</code> | Location: <code>File-level</code></div>
+      <div class="small">Trigger: <code>comment_density = 0.0 (threshold: 0.05)</code></div>
+      <div style="margin-top:6px">Comment density of 0.0% indicates virtually no documentation. This severely impacts maintainability.</div>
+      <div style="margin-top:6px"><b>Action:</b> Prioritize adding documentation. Start with public APIs, then document complex internal logic.</div>
+    </div>
+
+    <div class="rec">
+      <div><b>[HIGH] Critical: No Documentation (0.0%)</b></div>
+      <div class="small">File: <code>sample_repos\multilang_bad_project\src\BadJava.java</code> | Location: <code>File-level</code></div>
+      <div class="small">Trigger: <code>comment_density = 0.0 (threshold: 0.05)</code></div>
+      <div style="margin-top:6px">Comment density of 0.0% indicates virtually no documentation. This severely impacts maintainability.</div>
+      <div style="margin-top:6px"><b>Action:</b> Prioritize adding documentation. Start with public APIs, then document complex internal logic.</div>
+    </div>
+
+  </div></div>
+</div></body></html>
